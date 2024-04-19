@@ -1,7 +1,8 @@
-from langchain.vectorstores import Qdrant
-from langchain.embeddings import HuggingFaceBgeEmbeddings
+from langchain_community.vectorstores import Qdrant
+from langchain_community.embeddings import HuggingFaceBgeEmbeddings
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
+
 
 loader = PyPDFLoader("sample.pdf")
 documents = loader.load()
