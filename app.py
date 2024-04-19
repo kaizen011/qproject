@@ -12,21 +12,21 @@ embeddings = HuggingFaceBgeEmbeddings(
     encode_kwargs = encode_kwargs
 )
 
-url = "http://localhost:6333"
+url = "http://localhost:6333/dashboard#/collections/gpt_db"
 collection_name = "gpt-db"
 
 client = QdrantClient(
-    url= url,
-    prefer_grpc=False,
+    url = url,
+    prefer_grpc = False
 )
 
 print(client)
 print("########################")
 
 db = Qdrant(
-    client=client,
-    embeddings=embeddings,
-    collection_name=collection_name
+    client = client,
+    embeddings = embeddings,
+    collection_name = collection_name
 )
 
 print(db)
